@@ -1,7 +1,9 @@
+import 'dart:html';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:social_4pet/gradient_button.dart';
 
 class PetApp extends StatelessWidget {
   final routers = <String, WidgetBuilder>{
@@ -38,36 +40,48 @@ class _PetInfoScreenState extends State<PetInfoScreen> {
     fit: BoxFit.cover,
   );
 
+  final logo = Image.asset(
+    Assets.logo,
+    filterQuality: FilterQuality.high,
+    fit: BoxFit.cover,
+  );
+
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
     precacheImage(backgroundWidget.image, context);
     precacheImage(preview.image, context);
+    precacheImage(logo.image, context);
   }
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
-    final ratio = width / 1440;
-    final left = min<double>(180 * ratio, 180);
     return Scaffold(
-      // backgroundColor: Colors.black,
+      backgroundColor: Colors.black,
       body: Align(
         alignment: Alignment.center,
         child: Stack(
-          fit: StackFit.passthrough,
           children: [
             backgroundWidget,
             Positioned.fill(
-              child: Padding(
-                padding: EdgeInsets.only(top: 20, bottom: 20, left: left),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  widthFactor: 0.125,
-                  child: AspectRatio(
-                    aspectRatio: 0.5,
-                    child: preview,
-                  ),
+              child: Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: AspectRatio(
+                        aspectRatio: 0.5,
+                        child: preview,
+                      ),
+                    ),
+                    Flexible(
+                      child: FractionallySizedBox(
+                        widthFactor: 0.384,
+                        child: buildRightPanel(),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -76,10 +90,27 @@ class _PetInfoScreenState extends State<PetInfoScreen> {
       ),
     );
   }
+
+  Widget buildRightPanel() {
+    return Column(
+      children: [
+        logo,
+        GradientButton(
+          'coming soon',
+          onTap: handleOnTap,
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
+        ),
+      ],
+    );
+  }
+
+  void handleOnTap() {
+    window.location.href = 'https://github.com/4pet-social';
+  }
 }
 
 class Assets {
   static const background = 'assets/background.png';
-  static const intro = 'assets/intro.png';
+  static const logo = 'assets/logo.png';
   static const preview = 'assets/preview.png';
 }
