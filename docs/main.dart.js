@@ -41127,7 +41127,7 @@ s.toString
 U.Un(r.f.c,s)},
 P:function(a,b){var s=this,r=null,q=t.fQ
 return new M.oN(new T.is(C.bd,r,r,T.xi(C.hY,H.d([s.d,T.a1Y(T.DB(new T.wL(C.I,C.oL,C.lP,C.kD,r,C.mT,C.o,H.d([new T.is(C.qB,r,r,new T.rQ(0.5,s.e,r),r),new T.ud(new T.uk(0.384,new T.tl(C.V,C.oK,C.lP,C.kD,r,C.mT,r,H.d([s.f,new N.uq("coming soon",s.gKy(),C.tK,r)],q),r),r),r)],q),r),r,r))],q),C.hR),r),C.k,r)},
-Kz:function(){window.location.href="https://github.com/4pet-social"}}
+Kz:function(){window.location.href="https://www.facebook.com/4petsocial"}}
 E.fZ.prototype={
 gk:function(a){return this.b},
 h:function(a,b){if(b>=this.b)throw H.a(P.aS(b,this,null,null,null))
