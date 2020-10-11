@@ -105,7 +105,7 @@ class _PetInfoScreenState extends State<PetInfoScreen> {
   }
 
   void handleOnTap() {
-    window.location.href = 'https://github.com/4pet-social';
+    window.location.href = 'https://www.facebook.com/4petsocial';
   }
 }
 
