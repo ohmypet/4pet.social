@@ -1,11 +1,11 @@
 {
-    "name": "social_4pet",
-    "short_name": "social_4pet",
+    "name": "The mobile application for 4PET - The social network for your pet.",
+    "short_name": "4Pet Social",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "4PET is a social network for pet lovers. We focus on improving our users' daily experiences, like sharing moments, stories, photos, videos, etc with pets. We develop a pet rescue feature in situations of danger and help them find a new family. In the near future, we will launch a new coin based on Blockchain technology. 4PET will be a pet-specific universe, anything about pets.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
