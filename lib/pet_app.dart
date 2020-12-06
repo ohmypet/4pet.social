@@ -13,7 +13,7 @@ class PetApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '4Pet social',
+      title: '4Pet Social',
       routes: routers,
     );
   }
