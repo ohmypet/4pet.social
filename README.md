@@ -1,9 +1,10 @@
 ## 4pet.social
-The landing page for 4PET
+
+The landing page 💅 for 4Pet
 
 ![](images/page.png)
 
-## Getting starts
+## Getting started
 
 Flutter version: `1.24.0-10.1.pre`
 
@@ -16,4 +17,4 @@ flutter run
 
 ## License 
 
-Copyright (c) 2020 [4pet social](https://github.com/4pet-social)
+Copyright (c) 2020 [4Pet Social](https://github.com/4pet-social)
