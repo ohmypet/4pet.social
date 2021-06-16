@@ -1,27 +1,33 @@
 import 'dart:html';
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:social_4pet/gradient_button.dart';
+import 'package:social_4pet/policy_screen.dart';
 
 class PetApp extends StatelessWidget {
   final routers = <String, WidgetBuilder>{
-    PetInfoScreen.name: (_) => const PetInfoScreen()
+    PetInfoScreen.name: (_) => const PetInfoScreen(),
+    PolicyScreen.name: (_) => const PolicyScreen(),
   };
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '4Pet Social',
+      title: 'OhMyPet Social',
       routes: routers,
+      initialRoute: PetInfoScreen.name,
+      onUnknownRoute: (_) {
+        return MaterialPageRoute(builder: (_) => const PetInfoScreen());
+      },
     );
   }
 }
 
 class PetInfoScreen extends StatefulWidget {
   static const name = '/';
-  const PetInfoScreen({Key key}) : super(key: key);
+
+  const PetInfoScreen({Key? key}) : super(key: key);
 
   @override
   _PetInfoScreenState createState() => _PetInfoScreenState();
@@ -105,7 +111,7 @@ class _PetInfoScreenState extends State<PetInfoScreen> {
   }
 
   void handleOnTap() {
-    window.location.href = 'https://www.facebook.com/4petsocial';
+    window.location.href = 'https://www.facebook.com/1ohmypet';
   }
 }
 

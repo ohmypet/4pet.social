@@ -1,6 +1,6 @@
-## 4pet.social
+## Ohmypet.social
 
-The landing page 💅 for 4Pet
+The landing page 💅 for Ohmypet
 
 ![](images/page.png)
 

@@ -5,7 +5,7 @@ import 'package:social_4pet/pet_colors.dart';
 
 class GradientButton extends StatelessWidget {
   final String text;
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
   final Gradient gradient;
   final EdgeInsets padding;
   final TextStyle style;
@@ -14,7 +14,7 @@ class GradientButton extends StatelessWidget {
 
   const GradientButton(
     this.text, {
-    Key key,
+    Key? key,
     this.onTap,
     this.gradient = PetColors.gradient_button,
     this.padding = const EdgeInsets.symmetric(vertical: 20),

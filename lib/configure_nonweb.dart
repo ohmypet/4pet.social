@@ -1,0 +1,3 @@
+void configureApp() {
+  // no options
+}
