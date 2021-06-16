@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:social_4pet/policy.dart';
+import 'package:social_4pet/term_of_user.dart';
 
 class PolicyScreen extends StatelessWidget {
   static final String name = '/policy';
@@ -7,6 +9,14 @@ class PolicyScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text('123');
+    return Scaffold(
+      body: ListView(
+        padding: const EdgeInsets.all(48),
+        children: [
+          Policy(),
+          TermOfUser(),
+        ],
+      ),
+    );
   }
 }
