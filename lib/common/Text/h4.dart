@@ -20,6 +20,7 @@ class H4 extends StatelessWidget {
               height: 1.4,
             ),
           ),
+      textAlign: TextAlign.justify,
     );
   }
 }

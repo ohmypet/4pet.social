@@ -13,8 +13,9 @@ class PolicyScreen extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(48),
         children: [
-          Policy(),
           TermOfUser(),
+          const SizedBox(height: 48),
+          Policy(),
         ],
       ),
     );
