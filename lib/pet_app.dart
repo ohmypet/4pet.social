@@ -15,10 +15,7 @@ class PetApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'OhMyPet Social',
-      routes: routers,
-      onUnknownRoute: (_) {
-        return MaterialPageRoute(builder: (_) => const PetInfoScreen());
-      },
+      routes: routers
     );
   }
 }
